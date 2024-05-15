@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <!-- menghubungkan ke css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- menghubungkan ke font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- menu -->
+        <ul id="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="penggunaan.html">Penggunaan</a></li>
+        </ul>
+        <!-- tombol get started -->
+        <button class="nav-btn"><a href="instagram.com/team.ichibot">Contact</a><img src="images/arrow-white.png"></button>
+
+        <!-- ombol menu (garis 3) di pojok atas -->
+        <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
+    </nav>
+    <div class="header">
+        <div class="header-content">
+        <h2>Sejarah Line Follower</h2>
+        <div class="text">
+            <b>Robot line follower</b> adalah salah satu jenis robot yang cara kerjanya mengikuti garis. Dalam bahasa Indonesia, "line follower" berarti <b>pengikut garis</b>.
+
+            Robot line follower menggunakan <b>sensor cahaya</b> untuk membaca dan mengikuti garis yang ada di depannya. Sensor ini terdiri dari <b>photodiode</b> dan <b>LED</b>.
+            LED berfungsi sebagai sumber cahaya yang diteruskan ke garis, dan cahaya yang dipantulkan oleh garis akan dibaca oleh photodiode. Jika photodiode menerima cahaya, itu
+            berarti sensor telah berhasil membaca adanya garis, dan robot akan mengikuti garis tersebut.</p><br>
+            
+            Garis yang biasa diikuti adalah garis hitam di atas permukaan yang berwarna putih atau garis putih di atas permukaan yang berwarna hitam. Prinsip ini memanfaatkan
+            sifat warna putih (yang memantulkan cahaya) dan warna hitam (yang tidak memantulkan cahaya).</p><br>
+            
+            Robot line follower dibagi menjadi dua jenis:<br>
+            1. Analog: Menggunakan IC transistor sebagai kontroler. Robot ini hanya bisa mengikuti garis berbentuk lurus, oval, atau kotak. <br>
+            2. Mikro: Menggunakan kontroler dalam bentuk IC board, seperti Arduino. Robot ini bisa diprogram sesuai perintah, termasuk belok kanan, kiri, atau berhenti. <br>
+            <br>
+            Teknologi robot line follower telah berkembang pesat dan digunakan dalam berbagai aplikasi, termasuk dalam pendidikan anak-anak dengan program <i>maze solving</i>.
+                Anak-anak diajak untuk memprogram robot line follower agar dapat menyelesaikan lintasan berkelok-kelok. Kemampuan spasial, kreativitas, strategi, logika, dan
+                analisis anak-anak banyak digunakan dalam proses ini.
+        </div>
+        </div>
+        <!-- <img src="images/robotLF.png" alt="" class="robotLF-img"> -->
+    </div>
+
+    <!-- javascript -->
+<script>
+    let navbar = document.querySelector('nav');
+    let menuLinks = document.getElementById("menu-links");
+//menampilkan menu
+    function toggleMenu(){
+        menuLinks.classList.toggle('show-menu');
+    }
+
+//fungsi tampilan menu jika digeser
+    window.onscroll = function(){
+        if(window.scrollY > 0){
+            navbar.style.background = '#950101'
+        } else {
+            navbar.style.background = 'transparent'
+        }
+    }
+</script>
+</body>
+<footer>
+    <br><br><br><p>&copy; Kadek Suana Riondhera - 2024.</p><br><br><br>
+</footer>
+</html>

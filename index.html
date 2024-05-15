@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <!-- menghubungkan ke css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- menghubungkan ke font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- menu -->
+        <ul id="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="penggunaan.html">Penggunaan</a></li>
+        </ul>
+        <!-- tombol get started -->
+        <button class="nav-btn"><a href="instagram.com/team.ichibot">Contact</a><img src="images/arrow-white.png"></button>
+
+        <!-- tombol menu (garis 3) di pojok atas -->
+        <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
+    </nav>
+    <div class="header">
+        <div class="header-content">
+        <h1>LINE<br>FOLLOWER</h1>
+        <div class="btn-container">
+            <!-- <button class="btn-dark"><a href="instagram">Contact</a> <img src="images/phone.png" alt="">
+            </button> -->
+            <button class="btn-dark"><a href="https://store.ichibot.id/product/robot-line-follower-ichibot-ultimate-5-max-support-wifi-dan-bluetooth-2/">Store</a> <img src="images/arrow-black.png" alt="">
+            </button>
+        </div>
+        <p>Belajar robot mudah dan menyenangkan.</p>
+        </div>
+        <img src="images/robot1.png" alt="" class="robot-img">
+    </div>
+
+    <!-- javascript -->
+<script>
+    let navbar = document.querySelector('nav');
+    let menuLinks = document.getElementById("menu-links");
+//menampilkan menu
+    function toggleMenu(){
+        menuLinks.classList.toggle('show-menu');
+    }
+
+//fungsi tampilan menu jika layar digeser
+    window.onscroll = function(){
+        if(window.scrollY > 0){
+            navbar.style.background = '#950101'
+        } else {
+            navbar.style.background = 'transparent'
+        }
+    }
+</script>
+</body>
+<footer>
+    <br><br><br><p>&copy; Kadek Suana Riondhera - 2024.</p><br><br><br>
+</footer>
+</html>
